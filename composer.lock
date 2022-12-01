@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "580866c3e9291ecf088e9452e77f0766",
+    "content-hash": "325940b603ac5b35b848b704076ebb45",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -2318,50 +2318,6 @@
                 "source": "https://github.com/php-gettext/PHP-Scanner/tree/v1.3.1"
             },
             "time": "2022-03-18T11:47:55+00:00"
-        },
-        {
-            "name": "google/protobuf",
-            "version": "v3.21.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "118cb171ecd7dcac38055a954717a3b5ed4a4e5a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/118cb171ecd7dcac38055a954717a3b5ed4a4e5a",
-                "reference": "118cb171ecd7dcac38055a954717a3b5ed4a4e5a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": ">=5.0.0"
-            },
-            "suggest": {
-                "ext-bcmath": "Need to support JSON deserialization"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Google\\Protobuf\\": "src/Google/Protobuf",
-                    "GPBMetadata\\Google\\Protobuf\\": "src/GPBMetadata/Google/Protobuf"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "proto library for PHP",
-            "homepage": "https://developers.google.com/protocol-buffers/",
-            "keywords": [
-                "proto"
-            ],
-            "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.21.10"
-            },
-            "time": "2022-11-30T19:56:32+00:00"
         },
         {
             "name": "graham-campbell/guzzle-factory",
@@ -6742,75 +6698,6 @@
                 "source": "https://github.com/roadrunner-server/roadrunner/tree/v2.12.0"
             },
             "time": "2022-11-24T14:32:20+00:00"
-        },
-        {
-            "name": "spiral/roadrunner-broadcast",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spiral/roadrunner-broadcast.git",
-                "reference": "693f92e9c34a552b060d6a0aa0e727caf80dcb24"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spiral/roadrunner-broadcast/zipball/693f92e9c34a552b060d6a0aa0e727caf80dcb24",
-                "reference": "693f92e9c34a552b060d6a0aa0e727caf80dcb24",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "google/protobuf": "^3.7",
-                "php": ">=7.4",
-                "spiral/goridge": "^3.1",
-                "spiral/roadrunner": "^2.0",
-                "symfony/polyfill-php80": "^1.23"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.0",
-                "roave/security-advisories": "dev-master",
-                "spiral/code-style": "^1.0",
-                "symfony/var-dumper": "^5.1",
-                "vimeo/psalm": ">=4.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GPBMetadata\\": "generated/GPBMetadata",
-                    "Spiral\\RoadRunner\\Broadcast\\": [
-                        "src",
-                        "generated/Spiral/RoadRunner/Broadcast"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Wolfy-J",
-                    "email": "wolfy.jd@gmail.com"
-                },
-                {
-                    "name": "Kirill Nesmeyanov (SerafimArts)",
-                    "email": "kirill.nesmeyanov@spiralscout.com"
-                },
-                {
-                    "name": "RoadRunner Community",
-                    "homepage": "https://github.com/spiral/roadrunner/graphs/contributors"
-                }
-            ],
-            "description": "RoadRunner broadcast plugin bridge",
-            "support": {
-                "issues": "https://github.com/spiral/roadrunner-broadcast/issues",
-                "source": "https://github.com/spiral/roadrunner-broadcast/tree/v2.1.0"
-            },
-            "time": "2022-08-30T13:52:06+00:00"
         },
         {
             "name": "spiral/roadrunner-cli",

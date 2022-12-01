@@ -1,4 +1,4 @@
-FROM ghcr.io/roadrunner-server/roadrunner:2.12.0 AS roadrunner
+FROM ghcr.io/roadrunner-server/roadrunner:2.12.1 AS roadrunner
 
 #
 # Golang dependencies build step

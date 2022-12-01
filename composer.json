@@ -71,7 +71,6 @@
     "slim/slim": "^4.2",
     "spatie/flysystem-dropbox": "^2",
     "spiral/roadrunner": "^2.12",
-    "spiral/roadrunner-broadcast": "^2.1",
     "spomky-labs/otphp": "^11",
     "supervisorphp/supervisor": "dev-main",
     "symfony/beanstalkd-messenger": "^6",
