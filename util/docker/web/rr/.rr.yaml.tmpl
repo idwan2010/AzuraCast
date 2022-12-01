@@ -1,0 +1,33 @@
+version: "2.7"
+
+rpc:
+  listen: tcp://127.0.0.1:6101
+
+server:
+  on_init:
+    command: "/var/azuracast/php_startup.sh"
+  exec_timeout: 300s
+  command: "php www/util/rr.php"
+
+http:
+  fcgi:
+    address: tcp://127.0.0.1:6100
+  pool:
+    num_workers: 4
+    supervisor:
+      watch_tick: 5s
+      ttl: 300s
+
+{{if ne .Env.APPLICATION_ENV "production"}}
+reload:
+  interval: 10s
+  dirs: [ "./www/bin", "./www/config", "./www/src", "./www/util" ]
+  recursive: true
+  patterns: [ ".php", ".phtml" ]
+
+logs:
+  mode: development
+{{ else }}
+logs:
+  mode: production
+{{ end }}

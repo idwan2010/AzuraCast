@@ -1,3 +1,5 @@
+FROM ghcr.io/roadrunner-server/roadrunner:2.12.0 AS roadrunner
+
 #
 # Golang dependencies build step
 #
@@ -17,9 +19,10 @@ FROM mariadb:10.9-jammy
 
 ENV TZ="UTC"
 
-# Add Dockerize
-COPY --from=go-dependencies /go/bin/dockerize /usr/local/bin
+# Add dependencies
+COPY --from=go-dependencies /go/bin/dockerize /usr/local/bin/dockerize
 COPY --from=go-dependencies /go/bin/supercronic /usr/local/bin/supercronic
+COPY --from=roadrunner /usr/bin/rr /usr/local/bin/rr
 
 # Run base build process
 COPY ./util/docker/common /bd_build/

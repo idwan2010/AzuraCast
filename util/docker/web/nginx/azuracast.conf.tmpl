@@ -1,9 +1,5 @@
-upstream php-fpm-internal {
-    server unix:/var/run/php-fpm-internal.sock;
-}
-
-upstream php-fpm-www {
-    server unix:/var/run/php-fpm-www.sock;
+upstream rr {
+    server 127.0.0.1:6100;
 }
 
 upstream centrifugo {
@@ -31,7 +27,7 @@ server {
     location ~ ^/index\.php(/|$) {
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
 
-        fastcgi_pass php-fpm-internal;
+        fastcgi_pass rr;
         fastcgi_index index.php;
         fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
         fastcgi_param DOCUMENT_ROOT $realpath_root;
@@ -121,7 +117,7 @@ server {
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
 
         # NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
-        fastcgi_pass php-fpm-www;
+        fastcgi_pass rr;
         fastcgi_index index.php;
         fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
         fastcgi_param DOCUMENT_ROOT $realpath_root;
