@@ -101,7 +101,7 @@ final class ConfigWriter implements EventSubscriberInterface
                 // MasterMe Presets
 
                 $lines = [
-                    'radio = ladspa.master_me(',
+                    'radio = lv2.master_me(',
                 ];
 
                 $preset = $settings->getMasterMePresetEnum();
@@ -113,9 +113,9 @@ final class ConfigWriter implements EventSubscriberInterface
 
                 foreach ($presetOptions as $presetKey => $presetVal) {
                     $presetVal = match (true) {
-                        is_int($presetVal) => self::toFloat($presetVal, 0),
+                        is_int($presetVal) => self::toFloat($presetVal, 1),
                         is_float($presetVal) => self::toFloat($presetVal),
-                        is_bool($presetVal) => ($presetVal) ? 'true' : 'false',
+                        is_bool($presetVal) => ($presetVal) ? '1.0' : '0.0',
                         default => $presetVal
                     };
 
