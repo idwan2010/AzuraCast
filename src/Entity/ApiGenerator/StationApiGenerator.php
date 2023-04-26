@@ -30,6 +30,7 @@ final class StationApiGenerator
         $response->name = (string)$station->getName();
         $response->shortcode = $station->getShortName();
         $response->description = (string)$station->getDescription();
+        $response->genre = (string)$station->getGenre();
         $response->frontend = (string)$station->getFrontendType();
         $response->backend = (string)$station->getBackendType();
         $response->url = $station->getUrl();

@@ -34,6 +34,12 @@ final class Station implements ResolvableUrlInterface
     public string $shortcode = '';
 
     #[OA\Property(
+        description: 'Station genre',
+        example: 'variety'
+    )]
+    public string $genre = '';
+
+    #[OA\Property(
         description: 'Station description',
         example: 'An AzuraCast station!'
     )]
