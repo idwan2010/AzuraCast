@@ -71,7 +71,7 @@ final class Twitter extends AbstractSocialConnector
 
             $response = $this->httpClient->request(
                 'POST',
-                'https://api.twitter.com/1.1/statuses/update.json',
+                'https://api.twitter.com//2/tweets',
                 [
                     'auth' => 'oauth',
                     'handler' => $stack,
